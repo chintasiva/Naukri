@@ -22,10 +22,10 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  
+
   export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
-  
+
     return (
       <Box>
         <Flex
@@ -58,12 +58,12 @@ import {
               color={useColorModeValue('gray.800', 'white')}>
              <Image width={"50px"} src="https://i.ibb.co/F4NGJ51/IMG-20221214-WA0003.jpg" />
             </Text>
-  
+
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>
-  
+
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
@@ -93,19 +93,19 @@ import {
           </Stack>     <Text marginLeft={15}>|</Text>
           <Text _hover={{cursor:"pointer"}} marginLeft={15}>  For Employees</Text>
         </Flex>
-  
+
         <Collapse in={isOpen} animateOpacity>
           <MobileNav />
         </Collapse>
       </Box>
     );
   }
-  
+
   const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-  
+
     return (
       <Stack direction={'row'} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
@@ -125,7 +125,7 @@ import {
                   {navItem.label}
                 </Link>
               </PopoverTrigger>
-  
+
               {navItem.children && (
                 <PopoverContent
                   border={0}
@@ -147,7 +147,7 @@ import {
       </Stack>
     );
   };
-  
+
   const DesktopSubNav = ({ label, href, subLabel } ) => {
     return (
       <Link
@@ -181,7 +181,7 @@ import {
       </Link>
     );
   };
-  
+
   const MobileNav = () => {
     return (
       <Stack
@@ -194,10 +194,10 @@ import {
       </Stack>
     );
   };
-  
+
   const MobileNavItem = ({ label, children, href }) => {
     const { isOpen, onToggle } = useDisclosure();
-  
+
     return (
       <Stack spacing={4} onClick={children && onToggle}>
         <Flex
@@ -224,7 +224,7 @@ import {
             />
           )}
         </Flex>
-  
+
         <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
           <Stack
             mt={2}
@@ -244,22 +244,40 @@ import {
       </Stack>
     );
   };
-  
+
 //   interface NavItem {
 //     label: string;
 //     subLabel?: string;
 //     children?: Array<NavItem>;
 //     href?: string;
 //   }
-  
+
   const NAV_ITEMS = [
     {
       label: 'Jobs',
       children: [
         {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
-          href: '#',
+          title: 'Popular categories',
+         submenu:[
+          {
+          title:"IT Jobs",
+          },
+          {
+            title:"Sales Jobs",
+            },
+            {
+              title:"Marketing Jobs",
+              },
+              {
+                title:"Data Science Jobs",
+                },
+                {
+                  title:"HR Jobs",
+                  },
+                  {
+                    title:"Engineering Jobs",
+                    },
+        ]
         },
         {
           label: 'New & Noteworthy',
@@ -283,6 +301,7 @@ import {
         },
       ],
     },
+    
     {
       label: 'Services',
       children: [
@@ -299,4 +318,4 @@ import {
       ],
     },
   ];
-  //check
+
