@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
      <AllRoutes/>
-     <Datafetch/>
+     {/* <Datafetch/> */}
       {/* <Carouselone /> */}
     </div>
   );
