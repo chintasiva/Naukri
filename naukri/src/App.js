@@ -1,9 +1,9 @@
 
 import './App.css';
-import Carouselone from './Components/Carouselone';
-import Home from './Components/Home';
+// import Carouselone from './Components/Carouselone';
+// import Home from './Components/Home';
 import AllRoutes from './Components/AllRoutes';
-import Datafetch from './Components/Datafetch';
+// import Datafetch from './Components/Datafetch';
 
 function App() {
   return (

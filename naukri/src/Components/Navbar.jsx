@@ -317,31 +317,3 @@ import {
       ],
     },
   ];
-// import {Flex, Link} from "@chakra-ui/react"
-// import React from "react"
-// import NavLinks from "./NavLinks"
-
-// const Navbar = () => {
-
-//   return (
-//   <nav className="bg-white">
-//     <div className="flex items-center font-medium justify-around">
-//       <div>
-//         <img width={60} src="https://i.ibb.co/F4NGJ51/IMG-20221214-WA0003.jpg" alt="logo" Style="cursor:pointer" />
-//       </div>
-      
-//       <div >
-//       <ul Style="display:flex, justify-content:space-around" className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
-//         <li>
-//           <Link to="/" className="py-7 px-3 inline-block" >Home</Link>
-//         </li>
-//         <NavLinks/>
-//       </ul>
-//       </div>
-      
-//     </div>
-//   </nav>
-//   )
-// }
-
-// export default Navbar
