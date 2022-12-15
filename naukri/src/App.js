@@ -1,11 +1,16 @@
 
 import './App.css';
-import Navbar from './Components/Navbar';
+import Carouselone from './Components/Carouselone';
+import Home from './Components/Home';
+import AllRoutes from './Components/AllRoutes';
+import Datafetch from './Components/Datafetch';
 
 function App() {
   return (
     <div className="App">
-    <Navbar/>
+     <AllRoutes/>
+     <Datafetch/>
+      {/* <Carouselone /> */}
     </div>
   );
 }
