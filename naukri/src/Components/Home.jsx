@@ -1,16 +1,33 @@
-import { Button, Container, Flex, Input, Select, Text } from '@chakra-ui/react';
+import { Button, Container, Flex, Input, Select, Stack, Text } from '@chakra-ui/react';
 // import Carouselone from './Carouselone';
 import Navbar from './Navbar';
 import { Navigate,Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Datafetch from './Datafetch';
+import { useContext } from 'react';
+import { StateContext } from '../Contexts/HandelState';
+
+
+
+
 function Home() {
 
+    const {setCountry,}=useContext(StateContext)
+    const {setLocation,setField,location,field}=useContext(StateContext)
+    // const handleSubmit = () => {
+        // console.log("clicked")
+       
+        // <Datafetch country={country}/>
+    // }
+    // }
+    // const handleCountry=(e)=>{
+    //     setCountry(e.target.value)
+    // }
+console.log(location)
 
-    const handleSubmit = () => {
-        console.log("clicked")
-        return <Navigate to="/datafetch" />
-
-    }
+// const handleClick=()=>{
+//     return <Navigate to="/datafetch" />
+// }
 
     return (
         <>
@@ -24,8 +41,24 @@ function Home() {
             <div style={{display:"flex" ,width: "80%",margin:"auto",
         boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         padding:"15px", borderRadius:"40px",marginTop:"25px"}}  >
-                <Input style={{ borderRadius: '100px' }} placeholder="Enter Company Name" type="text" />
-                <Select style={{ borderRadius: '100px' }}>
+                {/* <Input style={{ borderRadius: '100px' }} placeholder="Enter Company Name" type="text" /> */}
+                 <Select placeholder='Choose the Location' style={{ borderRadius: '100px' }}  onChange={(e)=>setLocation(e.target.value)}>
+                 
+                   <option value="Birmingham">Birmingham</option>
+                    <option value="Staffordshire">Staffordshire</option>
+                    <option value="Warwickshire">Warwickshire</option>
+                    <option value="Coventry">Coventry</option>
+                    <option value="Shropshire">Shropshire</option>
+                    <option value="Wolverhampton">Wolverhampton</option>
+                    <option value="Herefordshire">Herefordshire</option>
+                    <option value="Solihull">Solihull</option>
+                    <option value="Walsall">Walsall</option>
+                    <option value="Dudley">Dudley</option>
+                    <option value="Sutton Cold Field">Sutton Cold Field</option>
+                    
+                </Select>
+                
+                <Select style={{ borderRadius: '100px' }} onChange={(e)=>setField(e.target.value)}>
                     <option value="">Choose the Field</option>
                     <option value="Finance">Finance</option>
                     <option value="Marketing">Marketing</option>
@@ -33,9 +66,14 @@ function Home() {
                     <option value="Transportation">Transportation</option>
                     <option value="Medical">Medical</option>
                 </Select>
-                <Input style={{ borderRadius: '100px' }} placeholder="Search" />
-               <Link to={"/datafetch"} > <Button style={{ borderRadius: '100px' }} width={40} colorScheme='blue' variant='solid' >Search
+
+                <Input text="text" style={{ borderRadius: '100px' }} placeholder="Search"  onChange={(e)=>setCountry(e.target.value)}/>
+
+                
+               <Link to={"/datafetch"} ><Button style={{ borderRadius: '100px' }} width={40} colorScheme='blue' variant='solid'
+                >Search
                 </Button></Link>
+                
             </div>
             <div style={{display:"flex",justifyContent:"space-around",width:"60%",margin:"auto",marginTop:"50px"}}>
 

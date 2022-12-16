@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ChakraProvider} from "@chakra-ui/react"
 import {BrowserRouter} from "react-router-dom"
+import StateContextProvider from './Contexts/HandelState';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +13,9 @@ root.render(
   
   <ChakraProvider>
     <BrowserRouter>
+    <StateContextProvider>
     <App />
+    </StateContextProvider>
     </BrowserRouter>
   </ChakraProvider>
   
