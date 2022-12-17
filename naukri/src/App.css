@@ -36,3 +36,110 @@
     transform: rotate(360deg);
   }
 }
+.car{
+  width:90%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  border:1px solid rgb(223, 222, 222)
+
+}
+.car:hover{
+  cursor: pointer;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#icon{
+ color: rgb(255, 209, 4);
+}
+.image{
+  margin: auto;
+}
+.name{
+  margin-top: 40px;
+  font-size: 20px;
+}
+.tech{
+  margin-top: 40px;
+  color:gray
+}
+.btn{
+  margin-top: 30px;
+}
+.btn:hover{
+  background-color: rgb(109, 188, 219);
+}
+.car2{
+  padding: 25px;
+  border-radius: 10px;
+  margin-left: 10px;
+  border:1px solid rgb(223, 222, 222);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.car2:hover{
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.btnhire{
+  border-radius: 20px;
+  border:1px solid gray;
+  padding:5px;
+  margin-top: 20px;
+}
+#Btn1{
+  color:rgb(26, 26, 196);
+  padding:30px;
+  border:1px solid rgb(17, 17, 194);
+  border-radius: 30px;
+  background-color: white;
+}
+#Btn1:hover{
+  background-color: rgb(255, 254, 254);
+}
+.pgray{
+  margin-top: 10px;
+  color:gray;
+
+}
+.head{
+  font-size: 30px;
+  font-weight: bold;
+}
+.image1{
+  width:20%;
+  margin:auto
+}
+.cpy{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.rate{
+  color:gray;
+
+}
+.techname{
+  color:gray
+}
+.car3{
+  border:1px solid rgb(168, 168, 168);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.car3:hover{
+ cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.gray{
+  font-size: 15px;
+  color:gray
+}
+.newcla{
+  color:gray;
+  font-weight: bold;
+  font-size: 15px;
+}
+/*
+style={{width:"90%",boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",marginLeft:"25px"}}
+*/
