@@ -7,7 +7,7 @@ const Carouseltwo = () => {
     <div  style={{width:"83%",margin:"auto",padding:"40px"}}> 
         <Carousel cols={4} rows={1} gap={1} loop>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/4654342.gif" alt="" />
             <p className='name'>Cbts</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -19,7 +19,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/3835862.gif" alt="" />
             <p className='name'>Persistent</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -31,7 +31,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/2436002.gif" alt="" />
             <p className='name'>Xoriant</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -43,7 +43,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/315118.gif" alt="" />
             <p className='name'>Datamatics</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -55,7 +55,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/4156.gif" alt="" />
             <p className='name'>Cognizant</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -67,7 +67,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/126896.gif" alt="" />
             <p className='name'>Airtal</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -79,7 +79,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/162228.gif" alt="" />
             <p className='name'>Firstsource</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -91,7 +91,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/42932.gif" alt="" />
             <p className='name'>Genpact</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -103,7 +103,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/1288.gif" alt="" />
             <p className='name'>Capgemini</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -115,7 +115,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/4577755.gif" alt="" />
             <p className='name'>Accolite Digital</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>
@@ -127,7 +127,7 @@ const Carouseltwo = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car2' >
+        <div className='car2' >
             <img className='image' src="https://img.naukimg.com/logo_images/groups/v2/1186200.gif" alt="" />
             <p className='name'>Virtusa</p>
             <div style={{display:"flex",margin:"auto",alignItems:"center",justifyContent:"center"}}>

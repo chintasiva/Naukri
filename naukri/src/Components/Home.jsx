@@ -48,12 +48,12 @@ function Home() {
                 <Text style={{ marginTop: "10px" }} fontSize={15} color="gray.500" fontFamily={'sans-serif'}>5 lakh+ jobs for you to explore</Text>
             </div>
             <div style={{
-                display: "flex", width: "80%", margin: "auto",
+                display: "flex", width: "40%", margin: "auto",
                 boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                 padding: "15px", borderRadius: "40px", marginTop: "25px"
             }}  >
                 {/* <Input style={{ borderRadius: '100px' }} placeholder="Enter Company Name" type="text" /> */}
-                <Select placeholder='Choose the Location' style={{ borderRadius: '100px' }}  onChange={()=>handleClick}>
+                {/* <Select placeholder='Choose the Location' style={{ borderRadius: '100px' }}  onChange={()=>handleClick}>
                 onChange={(e) => setLocation(e.target.value)}
                     <option value="Birmingham">Birmingham</option>
                     <option value="Staffordshire">Staffordshire</option>
@@ -76,7 +76,7 @@ function Home() {
                     <option value="IT">IT</option>
                     <option value="Transportation">Transportation</option>
                     <option value="Medical">Medical</option>
-                </Select>
+                </Select> */}
 
                 <Input text="text" style={{ borderRadius: '100px' }} placeholder="Search" onChange={(e) => setCountry(e.target.value)} />
 

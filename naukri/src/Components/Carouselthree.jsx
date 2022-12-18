@@ -20,70 +20,70 @@ const Carouselthree = () => {
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car' >
+        <div className='car' >
             <h3>Front End  Developer</h3>
             <p className='pgray'>3.9K+ Jobs </p>
            
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car' >
+        <div className='car' >
             <h3>DevOps Engineer</h3>
             <p className='pgray'>2K+ Jobs </p>
            
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car' >
+        <div className='car' >
             <h3>Engineering Manager</h3>
             <p className='pgray'> 3.9K+ Jobs </p>
            
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car'>
+        <div className='car'>
             <h3>Technical Lead</h3>
             <p className='pgray'> 13.5K+ Jobs </p>
            
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car'>
+        <div className='car'>
             <h3>Automation Test Engi...</h3>
             <p className='pgray'> 2.2K+ Jobs </p>
            
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car' >
+        <div className='car' >
             <h3>Cyber Security</h3>
             <p className='pgray'> 494 Jobs </p>
             
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car'>
+        <div className='car'>
             <h3>Technical Architect</h3>
             <p className='pgray'> 9.2K+ Jobs </p>
             
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car'>
+        <div className='car'>
             <h3>Bussiness Analyst</h3>
             <p className='pgray'> 5.3K+ Jobs </p>
            
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car'>
+        <div className='car'>
             <h3>Data Scientist</h3>
             <p className='pgray'> 765 Jobs </p>
             
         </div>
       </Carousel.Item>
       <Carousel.Item >
-        <div class='car'>
+        <div className='car'>
             <h3>Program Manger</h3>
             <p className='pgray'> 695Jobs </p>
             
