@@ -1,321 +1,183 @@
-import {
-    Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
-    Stack,
-    Collapse,
-    Icon,
-    Link,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    useColorModeValue,
-    useBreakpointValue,
-    useDisclosure,
-    Image
-  } from '@chakra-ui/react';
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from '@chakra-ui/icons';
+import {Link} from "react-router-dom"
+function Navbar() {
 
-  export default function Navbar() {
-    const { isOpen, onToggle } = useDisclosure();
+  return (
+<div id="pnav">
+    <div id="navbar">
+      <div>
+        <img style={{ width: "150px" }} src="https://i.ibb.co/C2Wz7m8/rctLogo.png"
+          alt="" />
+      </div>
+      <div>
 
-    return (
-      <Box>
-        <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
-          borderBottom={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}>
-          <Flex
-            flex={{ base: 1, md: 'auto' }}
-            ml={{ base: -2 }}
-            display={{ base: 'flex', md: 'none' }}>
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-              }
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-            />
-          </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-             <Image width={"50px"} src="https://i.ibb.co/F4NGJ51/IMG-20221214-WA0003.jpg" />
-            </Text>
 
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-              <DesktopNav />
-            </Flex>
-          </Flex>
 
-          <Stack
-            flex={{ base: 1, md: 0 }}
-            justify={'flex-end'}
-            direction={'row'}
-            spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Login
-            </Button>
-            <Button
-            borderRadius={20}
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'orange.400'}
-              href={'#'}
-              _hover={{
-                bg: 'orange.300',
-              }}>
-              Register
-            </Button>
-          </Stack>     <Text marginLeft={15}>|</Text>
-          <Text _hover={{cursor:"pointer"}} marginLeft={15}>  For Employees</Text>
-        </Flex>
+        <div id="dropdown">
+          <h4 id="dropbtn" style={{color:"black"}}>Jobs</h4>
+          <div id="dropcont">
+            <div id="parent">
+              <div>
+                <h2 className="q">IT jobs</h2>
+                <p className="hub">Sales jobs</p>
+                <h3 className="hub">Marketing jobs</h3>
+                <h3 className="hub">Data Science jobs</h3>
+                <h3 className="hub">HR jobs</h3>
+                <h3 className="hub">Engineering jobs</h3>
+              </div>
+             <hr transform=" rotate(90deg)" width="2px"/>
+              <div>
+                <h2 className="q">Jobs in damand</h2>
+                <p className="hub">Fresher jobs</p>
+                <h3 className="hub">MNC jobs</h3>
+                <h3 className="hub">Remote jobs</h3>
+                <h3 className="hub">Work from home jobs</h3>
+                <h3 className="hub">Walk in jobs</h3>
+                <h3 className="hub">Part-time jobs</h3>
+              </div>
+              <div>
+                <h2 className="q">Jobs in Location</h2>
+                <p className="hub">Jobs in Delhi</p>
+                <h3 className="hub">Jobs in Mumbai</h3>
+                <h3 className="hub">Jobs in Banglore</h3>
+                <h3 className="hub">Jobs in Hydrabad</h3>
+                <h3 className="hub">Jobs in Chennai</h3>
+                <h3 className="hub">Jobs in Pune</h3>
+              </div>
+              <div>
+                <h2 className="q">Explore more jobs</h2>
+                <p className="hub">Jobs by category</p>
+                <h3 className="hub">Jobs by skill</h3>
+                <h3 className="hub">Jobs by location</h3>
+                <h3 className="hub">Jobs by designation</h3>
+                <h3 className="hub">Create free job alert</h3>
 
-        <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
-        </Collapse>
-      </Box>
-    );
-  }
+              </div>
+            </div>
+          </div>
 
-  const DesktopNav = () => {
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
-    const linkHoverColor = useColorModeValue('gray.800', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
-    return (
-      <Stack direction={'row'} spacing={4}>
-        {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
-            <Popover trigger={'hover'} placement={'bottom-start'}>
-              <PopoverTrigger>
-                <Link
-                  p={2}
-                  href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
-                  color={linkColor}
-                  _hover={{
-                    textDecoration: 'none',
-                    color: linkHoverColor,
-                  }}>
-                  {navItem.label}
-                </Link>
-              </PopoverTrigger>
 
-              {navItem.children && (
-                <PopoverContent
-                  border={0}
-                  boxShadow={'xl'}
-                  bg={popoverContentBgColor}
-                  p={4}
-                  rounded={'xl'}
-                  minW={'sm'}>
-                  <Stack>
-                    {navItem.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
-                    ))}
-                  </Stack>
-                </PopoverContent>
-              )}
-            </Popover>
-          </Box>
-        ))}
-      </Stack>
-    );
-  };
 
-  const DesktopSubNav = ({ label, href, subLabel } ) => {
-    return (
-      <Link
-        href={href}
-        role={'group'}
-        display={'block'}
-        p={2}
-        rounded={'md'}
-        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
-        <Stack direction={'row'} align={'center'}>
-          <Box>
-            <Text
-              transition={'all .3s ease'}
-              _groupHover={{ color: 'pink.400' }}
-              fontWeight={500}>
-              {label}
-            </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
-          </Box>
-          <Flex
-            transition={'all .3s ease'}
-            transform={'translateX(-10px)'}
-            opacity={0}
-            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-            justify={'flex-end'}
-            align={'center'}
-            flex={1}>
-            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
-          </Flex>
-        </Stack>
-      </Link>
-    );
-  };
+        </div>
+        <div id="dropdown">
+          <h4 id="dropbtn" style={{color:"black"}}>Companies</h4>
+          <div id="dropcont">
+            <div id="parent">
+              <div>
+                <h2 className="q">Unicorn</h2>
+                <p className="hub">MNC</p>
+                <h3 className="hub">Startup</h3>
+                <h3 className="hub">Product based</h3>
+                <h3 className="hub">Internet</h3>
+              </div>
+              <div>
+                <h2 className="q">Explore collections</h2>
+                <p className="hub">Top companies</p>
+                <h3 className="hub">IT companies</h3>
+                <h3 className="hub">Fintech companies</h3>
+                <h3 className="hub">Sponsored companies</h3>
+                <h3 className="hub">Featured companies</h3>
 
-  const MobileNav = () => {
-    return (
-      <Stack
-        bg={useColorModeValue('white', 'gray.800')}
-        p={4}
-        display={{ md: 'none' }}>
-        {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
-        ))}
-      </Stack>
-    );
-  };
+              </div>
+              <div>
+                <h2 className="q">Research companies</h2>
+                <p className="hub">Interview questions</p>
+                <h3 className="hub">Company salaries</h3>
+                <h3 className="hub">Comapany reviews</h3>
+                <h3 className="hub">Salary Calculator</h3>
+              </div>
+              <div>
+                <h2 className="q">Explore collections</h2>
+                <p className="hub">Top companies</p>
+                <h3 className="hub">IT companies</h3>
+                <h3 className="hub">Fintech companies</h3>
+                <h3 className="hub">Sponsored companies</h3>
+                <h3 className="hub">Featured companies</h3>
 
-  const MobileNavItem = ({ label, children, href }) => {
-    const { isOpen, onToggle } = useDisclosure();
+              </div>
+            </div>
+          </div>
+        </div>
 
-    return (
-      <Stack spacing={4} onClick={children && onToggle}>
-        <Flex
-          py={2}
-          as={Link}
-          href={href ?? '#'}
-          justify={'space-between'}
-          align={'center'}
-          _hover={{
-            textDecoration: 'none',
-          }}>
-          <Text
-            fontWeight={600}
-            color={useColorModeValue('gray.600', 'gray.200')}>
-            {label}
-          </Text>
-          {children && (
-            <Icon
-              as={ChevronDownIcon}
-              transition={'all .25s ease-in-out'}
-              transform={isOpen ? 'rotate(180deg)' : ''}
-              w={6}
-              h={6}
-            />
-          )}
-        </Flex>
+        <div id="dropdown">
+          <h4 id="dropbtn" style={{color:"black"}}>Services</h4>
+          <div id="dropcont">
+            <div id="parent">
+              <div>
+                <h2 className="q">Resume writing</h2>
+                <p className="hub">Text resume</p>
+                <h3 className="hub">Visual resume</h3>
+                <h3 className="hub">Resume critique</h3>
+                
+              </div>
+              <div>
+                <h2 className="q">Get recruiter's attention</h2>
+                <p className="hub">Resume display</p>
+                <h3 className="hub">Recruiter connection</h3>
+                <h3 className="hub">Job search booster</h3>
+               
 
-        <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-          <Stack
-            mt={2}
-            pl={4}
-            borderLeft={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.700')}
-            align={'start'}>
-            {children &&
-              children.map((child) => (
-                <Link key={child.label} py={2} href={child.href}>
-                  {child.label}
-                </Link>
-              ))}
-          </Stack>
-        </Collapse>
-      </Stack>
-    );
-  };
+              </div>
+              <div>
+                <h2 className="q">Explore collections</h2>
+                <p className="hub">Top companies</p>
+                <h3 className="hub">IT companies</h3>
+                <h3 className="hub">Fintech companies</h3>
+                <h3 className="hub">Sponsored companies</h3>
+                <h3 className="hub">Featured companies</h3>
 
-//   interface NavItem {
-//     label: string;
-//     subLabel?: string;
-//     children?: Array<NavItem>;
-//     href?: string;
-//   }
+              </div>
+              <div>
+                <h2 className="q">Learn & upskill</h2>
+                <p className="hub">Data Science courses</p>
+                <h3 className="hub">Technology courses</h3>
+                <h3 className="hub">Management courses</h3>
+                <h3 className="hub">Finance courses</h3>
+              </div>
 
-  const NAV_ITEMS = [
-    {
-      label: 'Jobs',
-      children: [
-        {
-          title: 'Popular categories',
-         submenu:[
-          {
-          title:"IT Jobs",
-          },
-          {
-            title:"Sales Jobs",
-            },
-            {
-              title:"Marketing Jobs",
-              },
-              {
-                title:"Data Science Jobs",
-                },
-                {
-                  title:"HR Jobs",
-                  },
-                  {
-                    title:"Engineering Jobs",
-                    },
-        ]
-        },
-        {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
-        },
-      ],
-    },
-    {
-      label: 'Companies',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
-    },
-    
-    {
-      label: 'Services',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
-    },
-  ];
+            </div>
+          </div>
+        </div>
 
+
+
+        {/* <div id="dropdown1">
+          <h4 id="dropbtn1">Companies</h4>
+          <div id="dropcont1">
+            <p>Customor Stories</p>
+            <p>Lately Office hours signin</p>
+            <p>Lately LIVE replays</p>
+            <p>How to Postion ANYTHING</p>
+            <p>Ebooks</p>
+            <p>Blog</p>
+            <p>Help Center</p>
+          </div>
+        </div>
+        <div id="dropdown2">
+          <h4 id="dropbtn2">Company</h4>
+          <div id="dropcont2">
+            About
+            <p>Team Lately</p>
+            <p>Press & News</p>
+            <p>Lately Professional Services</p>
+            <p>Contact Us</p>
+          </div>
+        </div> */}
+
+
+
+        {/* <h4>Pricing</h4> */}
+
+      </div>
+      <div>
+       <Link to="/login"> <button id="btnlogin" >Login</button></Link>
+
+       <Link to="/signup"> <button style={{ padding: "10px 20px 10px 20px", backgroundColor: "orange", borderRadius: "25px" }}>SignUp</button></Link>
+
+      </div>
+
+    </div>
+    </div>
+  )
+}
+export default Navbar;
