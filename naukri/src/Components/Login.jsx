@@ -18,6 +18,8 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Link } from "react-router-dom"
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 
 
@@ -29,7 +31,9 @@ export default function Login() {
 
   return (
     <>
-     
+     <div>
+      <Navbar/>
+     </div>
       
       <Flex
         minH={'100vh'}
@@ -76,6 +80,9 @@ export default function Login() {
           </Box>
         </Stack>
       </Flex>
+      <div>
+        <Footer/>
+      </div>
     </>
   );
 }

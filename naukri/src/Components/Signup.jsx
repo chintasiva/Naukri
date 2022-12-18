@@ -1,26 +1,32 @@
 import {
-    Flex,
-    Box,
-    FormControl,
-    FormLabel,
-    Input,
-    InputGroup,
-    HStack,
-    InputRightElement,
-    Stack,
-    Button,
-    Heading,
-    Text,
-    useColorModeValue,
-    
-  } from '@chakra-ui/react';
-  import { useState } from 'react';
-  import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-  import {Link} from "react-router-dom"
-  export default function Signup() {
-    const [showPassword, setShowPassword] = useState(false);
-  
-    return (
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  HStack,
+  InputRightElement,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+
+} from '@chakra-ui/react';
+import { useState } from 'react';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Link } from "react-router-dom"
+import Navbar from './Navbar';
+import Footer from './Footer';
+export default function Signup() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <>
+      <div>
+        <Navbar />
+      </div>
       <Flex
         minH={'100vh'}
         align={'center'}
@@ -31,7 +37,7 @@ import {
             <Heading fontSize={'4xl'} textAlign={'center'}>
               Sign up
             </Heading>
-         
+
           </Stack>
           <Box
             rounded={'lg'}
@@ -73,18 +79,18 @@ import {
                 </InputGroup>
               </FormControl>
               <Stack spacing={10} pt={2}>
-              <Link to="/login">
-              <Button
-                  loadingText="Submitting"
-                  size="lg"
-                  bg={'blue.400'}
-                  color={'white'}
-                  _hover={{
-                    bg: 'blue.500',
-                  }} onClick={()=>alert("Register Successfull!")} >
-                  Sign up
-                </Button>
-              </Link>
+                <Link to="/login">
+                  <Button
+                    loadingText="Submitting"
+                    size="lg"
+                    bg={'blue.400'}
+                    color={'white'}
+                    _hover={{
+                      bg: 'blue.500',
+                    }} onClick={() => alert("Register Successfull!")} >
+                    Sign up
+                  </Button>
+                </Link>
               </Stack>
               <Stack pt={6}>
                 <Text align={'center'}>
@@ -95,5 +101,9 @@ import {
           </Box>
         </Stack>
       </Flex>
-    );
-  }
+      <div>
+        <Footer />
+      </div>
+    </>
+  );
+}
